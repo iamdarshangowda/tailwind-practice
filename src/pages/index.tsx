@@ -1,9 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from "next/head";
 
 export default function Home() {
   return (
@@ -14,110 +9,53 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
+      <main>
+        <div className="shadow-lg p-3 max-w-sm mx-auto rounded-xl text-center mt-2 ">
+          <h1 className="text-black font-medium text-xl ">
+            Profile Card Using Tailwind CSS
+          </h1>
         </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
+        <div className="max-w-xs mx-auto my-4 flex flex-col align-center justify-center  rounded-lg ">
+          <img
+            src={"/image/darshan.jpg"}
+            alt=""
+            className="object-cover rounded-t-lg"
           />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+          <div className=" bg-black text-center rounded-b-lg pb-4">
+            <h2 className="font-bold text-2xl text-white mt-5">
+              Darshan Gowda
+            </h2>
+            <h4 className="text-orange-400 mt-1">Frontend Developer</h4>
+            <div className="flex gap-6 justify-center mt-3">
+              <button className="bg-white hover:bg-gray-200 text-black rounded-lg py-3 px-5 font-bold max-w-[115px] w-full">
+                Email
+              </button>
+              <button className="bg-blue-500 hover:bg-blue-700 rounded-lg text-white font-bold py-3 px-5 max-w-[115px] w-full">
+                LinkedIn
+              </button>
+            </div>
+            <div className="px-9 pt-8 mb-3">
+              <h4 className="text-base font-bold text-white text-left mb-1">
+                About
+              </h4>
+              <p className="text-white text-left text-sm ">
+                I am a frontend developer with a particular interest in making
+                things simple and automating daily tasks. I try to keep up with
+                security and best practices, and am always looking for new
+                things to learn.
+              </p>
+            </div>
+            <div className="px-9 mb-3">
+              <h4 className="text-white font-bold mb-1 text-left">Interests</h4>
+              <p className="text-white text-left text-sm">
+                Food expert. Music scholar. Reader. Internet fanatic. Bacon
+                buff. Entrepreneur. Travel geek. Pop culture ninja. Coffee
+                fanatic.
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
         </div>
       </main>
     </>
-  )
+  );
 }
